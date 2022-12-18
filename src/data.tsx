@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { BiListUl, BiUser } from 'react-icons/bi';
 
 interface IFormationDetail {
