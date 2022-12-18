@@ -41,12 +41,11 @@ const SideBar = styled.div`
     }
 
     li {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: var(--primary-color);
       /* padding-left: 4rem; */
       text-align: right;
-      padding-right: 3rem;
-      padding-left: 1rem;
+      padding: 0 3rem;
       line-height: 6rem;
       cursor: pointer;
 

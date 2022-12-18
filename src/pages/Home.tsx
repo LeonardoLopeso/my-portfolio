@@ -31,8 +31,8 @@ const Container = styled.div`
 
   div {
     position: relative;
-    width: 370px;
-    height: 370px;
+    width: 300px;
+    height: 300px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -42,8 +42,8 @@ const Container = styled.div`
     img {
       position: absolute;
       bottom: 1px;
-      max-width: 420px;
-      max-height: 420px;
+      max-width: 380px;
+      max-height: 380px;
       object-fit: cover;
       z-index: 10;
       clip-path: ellipse(48% 50%);
