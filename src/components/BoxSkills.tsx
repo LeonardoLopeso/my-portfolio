@@ -1,6 +1,6 @@
 
 import styled from 'styled-components';
-import { AssetsHardSkills, ListExperience, Skills } from '../data';
+import { AssetsHardSkills, Skills } from '../data';
 
 
 const BoxSkills = () => {

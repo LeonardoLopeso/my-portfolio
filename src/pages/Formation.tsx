@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import BoxContainer from '../components/BoxContainer';
 import BoxInformations from '../components/BoxInfomations';
 

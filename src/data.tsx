@@ -23,11 +23,11 @@ interface IPeriodoOccupation {
   end: string;
 }
 
-interface IEvolutionProfissional {
-  initialOccupation: IPeriodoOccupation;
-  nextOccupation: IPeriodoOccupation;
+// interface IEvolutionProfissional {
+//   initialOccupation: IPeriodoOccupation;
+//   nextOccupation: IPeriodoOccupation;
 
-}
+// }
 
 export interface IDataWork {
   company: string;
