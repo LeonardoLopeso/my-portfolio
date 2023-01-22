@@ -26,7 +26,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  height: 100%;
+  padding-top: 5%;
   color: var(--primary-color);
 
   div {
@@ -61,7 +62,7 @@ const Container = styled.div`
   }
   p {
     font-size: 1.2rem;
-    max-width: 960px;
+    max-width: 825px;
     margin-top: 25px;
     text-align: center;
   }
