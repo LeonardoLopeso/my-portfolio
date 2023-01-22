@@ -2,15 +2,29 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 import Bg3 from '../assets/images/Bg3.png';
 import Sidebar from './SideBar';
+import { FaBars } from 'react-icons/fa';
+import { useMain } from '../context/main';
 
 type Props = {
   children: ReactNode;
 }
 
 const Theme = ({ children }: Props) => {
+  const { isOpenSidebar, openAndCloseSidebar } = useMain();
+
   return(
     <Container>
-      <BoxContentWrapper>
+      {!isOpenSidebar &&
+        <MenuBars>
+          <FaBars 
+            size={22} 
+            color="#FFF" 
+            cursor={'pointer'}
+            onClick={() => openAndCloseSidebar()}
+          />
+        </MenuBars>
+      }
+      <BoxContentWrapper isOpenGrid={isOpenSidebar}>
 
         <Content>
           {children}
@@ -26,6 +40,7 @@ const Theme = ({ children }: Props) => {
 }
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -59,10 +74,23 @@ const Container = styled.div`
   }
 `;
 
-const BoxContentWrapper = styled.div`
+const MenuBars = styled.span`
+  position: absolute;
+  top: 40px;
+  right: 35px;  
+`;
+
+interface IPropBoxContentWrapper {
+  isOpenGrid: boolean;
+}
+const BoxContentWrapper = styled.div<IPropBoxContentWrapper>`
   display: grid;
-  grid-template-columns: calc(100% - 300px) 300px;
+  grid-template-columns: ${({ isOpenGrid }) => isOpenGrid ? 'auto 300px' : '1fr'};
   padding-top: 35px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Content = styled.div`

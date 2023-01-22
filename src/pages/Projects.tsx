@@ -52,6 +52,10 @@ const Container = styled.div`
   padding: 25px 55px;
 
   z-index: 10;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const CardProject = styled.div`

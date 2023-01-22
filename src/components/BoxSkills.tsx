@@ -122,6 +122,7 @@ const CardHardSkill = styled.div`
     div {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       padding: 0 .5rem;
 
       div {        

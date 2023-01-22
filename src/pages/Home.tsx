@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 import ImgLeo from '../assets/images/img-leo.png';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return(
     <Container>
-      <div>
+      <motion.div 
+        initial={{ y: 100 }} 
+        animate={{ y: 0 }}
+      >
         <img src={ImgLeo} alt="Leonardo Lopes" />
-      </div>
+      </motion.div>
       <h3>Leonardo Lopes de Oliveira</h3>
       <h4>Desenvolvedor de Sistemas</h4>
-      <p>Olá, Sou o Leonardo Lopes! Sou desenvolvedor de sistemas há quase 2 anos, atualmente resido em Natal — RN, Brasil. 
-        Iniciei a faculdade de Análise e Desenvolvimento de Sistemas, mas tive que trancar por conta do trabalho, no entanto, 
-        tenho o objetivo de finaliza-lá próximo ano. Paralelo à faculdade fiz alguns cursos online relacionado a
-         desenvolvimento de sistemas. Tenho maior aptidão no desenvolvimento Front-end, sou curioso e gosto de aprender 
-         coisas novas e entender como as coisas funcionam. Gosto de trabalhar em equipe, pois acredito que evoluímos 
-         mais rápido e saber que estou desempenhando um ótimo trabalho é como um combustível para mim por isso estou sempre em 
-         busca do próximo nível afim de entregar o meu melhor. Como hobbie gosto de tocar guitarra, 
-         gosto de atividades físicas e amo praticar Taekwondo.</p>
+      <p>Olá, Sou o Leonardo Lopes! Sou desenvolvedor de sistemas web há quase 2 anos, 
+        especializado em front-end utilizando as tecnologias HTML5, CSS3, JavaScript,JQuery, ReactJS, TypeScript, Bootstrap entre outras stacks. Atuando essencialmente na modelagem, desenvolvimento de telas e aprimoramento da UX/UI para consumo de API's. Sendo Responsável por todo o ciclo de desenvolvimento desde a prototipação, deploy e publicação.
+      </p>
     </Container>
   );
 }
