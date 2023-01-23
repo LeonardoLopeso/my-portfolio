@@ -19,7 +19,7 @@ const Modal = ({ data, onClose }: IProp) => {
           <h2>{data?.title}</h2>
           <p>{data?.desc}</p>
           <span>
-            <a href={data?.link} target="_blank">Visualizar</a>
+            <a href={data?.link} target="_blank" rel="noreferrer">Visualizar</a>
           </span>
         </div>
       </Content>

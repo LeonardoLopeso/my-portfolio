@@ -30,7 +30,7 @@ const Projects = () => {
               </div>
 
               <span>
-                <a href={i.link} target="_blank">Visualizar</a>
+                <a href={i.link} target="_blank" rel="noreferrer">Visualizar</a>
               </span>
             </BoxInfo>
           </CardProject>
