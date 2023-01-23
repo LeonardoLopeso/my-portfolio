@@ -18,14 +18,20 @@ const Projects = () => {
       <Container>
         {DataProjectToCard.map((i, k) => (
           <CardProject key={k}>
-            <ThumbProject onClick={() => openingModal({ title: i.title, img: i.img, desc: i.desc, link: i.link})}></ThumbProject>
+            <ThumbProject 
+              onClick={() => openingModal({ title: i.title, img: i.img, desc: i.desc, link: i.link})}
+            >
+              <img src={i.img} alt={i.title} />
+            </ThumbProject>
             <BoxInfo>
               <div>
                 <h2>{i.title}</h2>
                 <p>{i.desc}</p>
               </div>
 
-              <span>Visualizar</span>
+              <span>
+                <a href={i.link} target="_blank">Visualizar</a>
+              </span>
             </BoxInfo>
           </CardProject>
         ))}
@@ -74,6 +80,11 @@ const ThumbProject = styled.div`
   border-radius: 8px;
   background-color: rgba(217,217,217, .050);
   cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const BoxInfo = styled.div`
@@ -81,7 +92,7 @@ const BoxInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: .3rem 0;
 
   div {
     h2 {
@@ -101,6 +112,16 @@ const BoxInfo = styled.div`
     border-radius: 8px;
     background-color: #362145;
     cursor: pointer;
+    transition: all .4s ease;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
   }
 `;
 

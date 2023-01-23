@@ -18,7 +18,9 @@ const Modal = ({ data, onClose }: IProp) => {
         <div>
           <h2>{data?.title}</h2>
           <p>{data?.desc}</p>
-          <span>Visualizar</span>
+          <span>
+            <a href={data?.link} target="_blank">Visualizar</a>
+          </span>
         </div>
       </Content>
     </Container>
@@ -31,7 +33,7 @@ const Container = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0, .8);
+  background-color: rgba(0,0,0, .9);
   z-index: 100;
 `;
 
@@ -40,7 +42,7 @@ const Content = styled.div`
   max-width: 967px;
   min-height: 570px;
   margin: 8% auto 0 auto;
-  background: rgba(217, 217, 217, .2);
+  background: rgba(217, 217, 217, .1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   z-index: 200;
@@ -54,7 +56,7 @@ const Content = styled.div`
     padding: 0 15px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: rgba(217, 217, 217, .2);
+    background-color: rgba(217, 217, 217, 1);
   }
 
   div {
@@ -63,6 +65,31 @@ const Content = styled.div`
     h2 {
       font-size: 2rem;
       font-weight: 400;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    span {
+      color: #fff;
+      max-width: 104px;
+      text-align: center;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 8px;
+      background-color: #362145;
+      cursor: pointer;
+      transition: all .4s ease;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
     }
   }
 `;
@@ -74,6 +101,10 @@ const Img = styled.div<IPropImg>`
   width: 100%;
   height: 415px;
   background-color: rgba(0,0,0, .7);
+  background-image: url(${({ url }) => url});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 export default Modal;

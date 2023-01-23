@@ -8,6 +8,13 @@ const Home = () => {
       <motion.div 
         initial={{ y: 100 }} 
         animate={{ y: 0 }}
+        transition={{
+          type: "spring",
+          damping: 4,
+          mass: .4,
+          stiffness: 150,
+          duration: 1,
+        }}
       >
         <img src={ImgLeo} alt="Leonardo Lopes" />
       </motion.div>

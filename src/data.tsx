@@ -1,5 +1,5 @@
 import { BiListUl, BiUser } from 'react-icons/bi';
-import { Bootstrap, CodeIgniter, CSS3, Figma, HTML5, JavaScript, JQuery, MySQL, NodeJS, PHP, Sass, SEO, TypeScript } from './assets';
+import { Bootstrap, CalcIMC, CodeIgniter, ControlGastos, CSS3, Dashboard, Figma, HTML5, JavaScript, JogoDaMemoria, JQuery, MySQL, NodeJS, PHP, Sass, SEO, TypeScript } from './assets';
 
 export interface IFormationDetail {
   institution?: string;
@@ -241,27 +241,27 @@ export interface IDataProject {
 }
 export const DataProjectToCard: Array<IDataProject> = [
   {
-    title: "Projeto 01",
-    img: "#",
-    desc: "Lorem Ispum dollor amet Lorem Ispum dollor amet, Lorem Ispum dollor amet Lorem Ispum dollor amet.",
-    link: "https//aqui.com"
+    title: "Jogo da Memória",
+    img: JogoDaMemoria,
+    desc: "Projeto desenvolvido com ReactJS, TypeScript, Styled-Components, utilizado conceito de componentização e os recursos do react como por exemplo: useState, useEffect...",
+    link: "https://github.com/LeonardoLopeso/jogo-da-memoria"
   },
   {
-    title: "Projeto 02",
-    img: "#",
-    desc: "Lorem Ispum dollor amet Lorem Ispum dollor amet, Lorem Ispum dollor amet Lorem Ispum dollor amet.",
-    link: "https//aqui.com"
+    title: "Calculadora de IMC",
+    img: CalcIMC,
+    desc: "Calculadora de IMC desenvolvido em ReactJS, TypeScript, Styled-Components utilizando conceito de componentização.",
+    link: "https://github.com/LeonardoLopeso/calc-imc"
   },
   {
-    title: "Projeto 03",
-    img: "#",
-    desc: "Lorem Ispum dollor amet Lorem Ispum dollor amet, Lorem Ispum dollor amet Lorem Ispum dollor amet.",
-    link: "https//aqui.com"
+    title: "Controle de Gastos",
+    img: ControlGastos,
+    desc: "Sistema para controle de gastos desenvolvido em PHP, CodeIgniter e MySQL.",
+    link: "#"
   },
   {
-    title: "Projeto 04",
-    img: "#",
-    desc: "Lorem Ispum dollor amet Lorem Ispum dollor amet, Lorem Ispum dollor amet Lorem Ispum dollor amet.",
-    link: "https//aqui.com"
+    title: "Dashboard",
+    img: Dashboard,
+    desc: "Dashboard para controle de aluguel de bots e salas de sinais.",
+    link: "https://doublerei.netlify.app"
   },
 ];

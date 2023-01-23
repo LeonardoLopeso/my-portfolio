@@ -15,6 +15,13 @@ const Sidebar = () => {
       <motion.div 
         initial={{ x: 300}} 
         animate={{ x: 0 }}
+        transition={{
+          type: "spring",
+          damping: 9,
+          mass: .4,
+          stiffness: 140,
+          duration: 1,
+        }}
       >
         <span>
           <IoMdClose 

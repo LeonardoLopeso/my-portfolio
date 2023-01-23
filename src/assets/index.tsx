@@ -18,6 +18,10 @@ import Sass from './png/sass.png';
 import Scrum from './png/scrum.png'; 
 import SEO from './png/seo.png'; 
 import TypeScript from './png/typescript.png';
+import JogoDaMemoria from './png/jogo-da-memoria.png';
+import CalcIMC from './png/calculadora-imc.png';
+import ControlGastos from './png/controle-gastos.png';
+import Dashboard from './png/dashboard.png';
 
 export {
   ReactJS,
@@ -39,5 +43,9 @@ export {
   Sass,
   Scrum,
   SEO,
-  TypeScript
+  TypeScript,
+  JogoDaMemoria,
+  CalcIMC,
+  ControlGastos,
+  Dashboard
 }
