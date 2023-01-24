@@ -2,11 +2,9 @@ import styled from 'styled-components';
 import ImgLeo from '../assets/images/img-leo.png';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import BtnNextOrPrevious from '../components/BtnNextOrPrevious';
 
 const Home = () => {
-  const navigate = useNavigate();
 
   return(
     <Container>

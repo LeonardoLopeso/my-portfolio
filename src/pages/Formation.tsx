@@ -1,5 +1,4 @@
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import BoxContainer from '../components/BoxContainer';
 import BoxInformations from '../components/BoxInfomations';
@@ -8,7 +7,6 @@ import BtnNextOrPrevious from '../components/BtnNextOrPrevious';
 import { ListFormation } from '../data';
 
 const Formation = () => {
-  const navigate = useNavigate();
 
   return(
     <BoxContainer title='Formação'>

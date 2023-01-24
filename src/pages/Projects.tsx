@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import BoxContainer from "../components/BoxContainer";
 import BtnNextOrPrevious from '../components/BtnNextOrPrevious';
@@ -8,8 +7,6 @@ import Modal from '../components/Modal';
 import { DataProjectToCard, IDataProject } from '../data';
 
 const Projects = () => {
-  const navigate = useNavigate();
-
   const [openModal, setOpenModal] = useState(false);
   const [dataModal, setDataModal] = useState<IDataProject>();
 
