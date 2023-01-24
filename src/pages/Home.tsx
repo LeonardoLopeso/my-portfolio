@@ -31,7 +31,7 @@ const Home = () => {
       <Previous>
         <BtnNextOrPrevious 
           title='Próxima Página'
-          path='/habilidades'
+          path='/formacao'
           iconRight={<FaArrowRight />}
         />
       </Previous>
