@@ -1,5 +1,5 @@
 import { BiListUl, BiUser } from 'react-icons/bi';
-import { Bootstrap, CalcIMC, CodeIgniter, ControlGastos, CSS3, Dashboard, Figma, HTML5, JavaScript, JogoDaMemoria, JQuery, MySQL, NodeJS, PHP, Sass, SEO, TypeScript } from './assets';
+import { Bootstrap, CalcIMC, CodeIgniter, ControlGastos, CSS3, Dashboard, Figma, HTML5, JavaScript, JogoDaMemoria, JQuery, MySQL, NodeJS, PHP, ReactJS, Sass, SEO, TypeScript } from './assets';
 
 export interface IFormationDetail {
   institution?: string;
@@ -186,6 +186,10 @@ export const AssetsHardSkills: IHardSkill[] = [
       {
         title: "JQuery",
         url: JQuery
+      },
+      {
+        title: "ReactJS",
+        url: ReactJS
       },
       {
         title: "TypeScript",
