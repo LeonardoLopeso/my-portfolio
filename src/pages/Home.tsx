@@ -66,6 +66,8 @@ const Container = styled.div`
       object-fit: cover;
       z-index: 10;
       clip-path: ellipse(48% 50%);
+
+
     }
   }
 
@@ -84,6 +86,19 @@ const Container = styled.div`
     margin-top: 25px;
     margin-bottom: 3rem;
     text-align: center;
+  }
+
+  @media (max-width: 500px) {
+
+    & > div {
+      max-width: 250px;
+      max-height: 250px;
+
+      img {
+        max-width: 300px;
+        max-height: 300px;
+      }
+    }
   }
 
   @media (max-width: 460px) {
