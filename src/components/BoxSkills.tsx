@@ -88,6 +88,11 @@ const SoftSkill = styled.div`
       color: #fff;
       background-color: rgba(255,255,255, .2);
     }
+
+    @media (max-width: 400px) {
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 `;
 
