@@ -102,8 +102,13 @@ const Footer = styled.footer`
   font-size: 1rem;
   text-align: left;
   color: var(--primary-color);
+  padding-top: 3rem;
   padding-left: 35px;
   margin-top: auto;
+
+  @media (max-width: 760px) {
+    text-align: center;
+  }
 `;
 
 export default Theme;

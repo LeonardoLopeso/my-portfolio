@@ -1,10 +1,15 @@
 import { useState } from 'react';
+import { FaArrowLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import BoxContainer from "../components/BoxContainer";
+import BtnNextOrPrevious from '../components/BtnNextOrPrevious';
 import Modal from '../components/Modal';
 import { DataProjectToCard, IDataProject } from '../data';
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const [openModal, setOpenModal] = useState(false);
   const [dataModal, setDataModal] = useState<IDataProject>();
 
@@ -46,6 +51,14 @@ const Projects = () => {
           />
         : null
       }
+
+      <Previous>
+        <BtnNextOrPrevious 
+          title='Página Anterior'
+          path='/habilidades'
+          iconLeft={<FaArrowLeft />}
+        />
+      </Previous>
     </BoxContainer>
   );
 }
@@ -61,6 +74,7 @@ const Container = styled.div`
 
   @media (max-width: 960px) {
     grid-template-columns: 1fr;
+    padding: 25px 10px;
   }
 `;
 
@@ -68,10 +82,14 @@ const CardProject = styled.div`
   display: flex;
   gap: 1rem;
   padding: 6px;
-  height: 259px;
+  min-height: 259px;
   border-radius: 8px;
   background: rgba(217, 217, 217, 0.02);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const ThumbProject = styled.div`
@@ -84,6 +102,10 @@ const ThumbProject = styled.div`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
   }
 `;
 
@@ -123,6 +145,19 @@ const BoxInfo = styled.div`
       color: #fff;
     }
   }
+
+  @media (max-width: 500px) {
+    width: 100%;
+
+    span {
+      margin-top: 1.2rem;
+    }
+  }
+`;
+
+const Previous = styled.p`
+  display: flex;
+  justify-content: center;
 `;
 
 export default Projects;

@@ -45,6 +45,10 @@ const BoxSkills = () => {
 
 const SectionInformation = styled.div`
   padding: 25px 55px;
+
+  @media (max-width: 760px) {
+    padding: 25px 10px;
+  }
 `;
 
 const SoftSkill = styled.div`
@@ -146,6 +150,13 @@ const CardHardSkill = styled.div`
           height: 34px;
         }
       }
+    }
+  }
+
+  @media (max-width: 760px) {
+
+    div {
+      justify-content: center;
     }
   }
 `;

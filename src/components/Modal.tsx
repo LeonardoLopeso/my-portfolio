@@ -28,11 +28,14 @@ const Modal = ({ data, onClose }: IProp) => {
 }
 
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
+  padding: 0 2%;
   background-color: rgba(0,0,0, .9);
   z-index: 100;
 `;
@@ -40,9 +43,10 @@ const Container = styled.div`
 const Content = styled.div`
   position: relative;
   max-width: 967px;
+  width: 100%;
   min-height: 570px;
   margin: 8% auto 0 auto;
-  background: rgba(217, 217, 217, .1);
+  background: rgba(217, 217, 217, .2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   z-index: 200;
@@ -60,6 +64,7 @@ const Content = styled.div`
   }
 
   div {
+    color: #fff;
     padding: 1.5rem 1rem; 
 
     h2 {
@@ -104,7 +109,8 @@ const Img = styled.div<IPropImg>`
   background-image: url(${({ url }) => url});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
+  border-radius: 8px;
 `;
 
 export default Modal;

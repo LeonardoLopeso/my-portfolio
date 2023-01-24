@@ -75,13 +75,36 @@ const SectionInformation = styled.div`
       flex-direction: column;
       font-size: 1.25rem;
       font-weight: 300;
-      padding-left: 1rem;
       
       li {
 
         span {
           font-weight: 600;
         }
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    padding: 25px 10px;
+
+    div {
+      div {
+        h3 {
+          font-size: 1.2rem;
+
+          span {
+            font-size: .9rem;
+          }
+        }
+
+        &:not(:nth-child(1)) {
+          margin-top: 4rem;
+        }
+      }
+
+      ul {
+        font-size: 1rem;
       }
     }
   }

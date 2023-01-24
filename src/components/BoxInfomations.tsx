@@ -59,6 +59,10 @@ const SectionInformation = styled.div`
       }
     }
   }
+
+  @media (max-width: 760px) {
+    padding: 25px 10px;
+  }
 `;
 
 export default BoxInformations;

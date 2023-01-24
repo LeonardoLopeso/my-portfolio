@@ -97,7 +97,7 @@ const SideBar = styled.div<IPropSidebar>`
   }
 
   @media (max-width: 1200px) {
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0,0,0, .96);
     z-index: 100;
   }
 `;
