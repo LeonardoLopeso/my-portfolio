@@ -91,13 +91,25 @@ const Container = styled.div`
   @media (max-width: 500px) {
 
     & > div {
-      max-width: 250px;
-      max-height: 250px;
+      max-width: 210px;
+      max-height: 210px;
 
       img {
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 260px;
+        max-height: 260px;
       }
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
     }
   }
 
