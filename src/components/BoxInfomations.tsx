@@ -1,6 +1,7 @@
 
 import styled from 'styled-components';
 import { IFormationDetail } from '../data';
+import { motion } from 'framer-motion';
 
 interface IProps {
   title: string;
@@ -12,7 +13,11 @@ const BoxInformations = ({ title, formation, type }: IProps) => {
     <SectionInformation>
       <h3>{title}</h3>
       
-      <div>{formation?.map((i, key) => (
+      <motion.div
+        initial={{ x: -120 }}
+        animate={{ x: 0 }}
+      >
+        {formation?.map((i, key) => (
         
         <ul>
           <li><span>Instituição: </span>{i.institution}</li>
@@ -26,7 +31,7 @@ const BoxInformations = ({ title, formation, type }: IProps) => {
             </>
           }
         </ul>
-      ))}</div>
+      ))}</motion.div>
     </SectionInformation>
   );
 }

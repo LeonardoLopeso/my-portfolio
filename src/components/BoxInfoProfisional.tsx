@@ -1,12 +1,17 @@
 
 import styled from 'styled-components';
 import { ListExperience } from '../data';
+import { motion } from 'framer-motion'; 
 
 
 const BoxInfoProfessional = () => {
   return(
     <SectionInformation>
-      <div>{ListExperience?.map((i, key) => (
+      <motion.div
+        initial={{ x: -120 }}
+        animate={{ x: 0 }}
+      >
+        {ListExperience?.map((i, key) => (
         <>
           <div>
             <h3>
@@ -31,7 +36,7 @@ const BoxInfoProfessional = () => {
             
           </ul>
         </>
-      ))}</div>
+      ))}</motion.div>
     </SectionInformation>
   );
 }

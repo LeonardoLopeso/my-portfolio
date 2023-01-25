@@ -44,9 +44,9 @@ const Content = styled.div`
   position: relative;
   max-width: 967px;
   width: 100%;
-  min-height: 570px;
+  /* height: 570px; */
   margin: 8% auto 0 auto;
-  background: rgba(217, 217, 217, .2);
+  background: rgba(217, 217, 217, .4);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   z-index: 200;
@@ -104,7 +104,7 @@ interface IPropImg {
 }
 const Img = styled.div<IPropImg>`
   width: 100%;
-  height: 415px;
+  min-height: 315px;
   background-color: rgba(0,0,0, .7);
   background-image: url(${({ url }) => url});
   background-repeat: no-repeat;

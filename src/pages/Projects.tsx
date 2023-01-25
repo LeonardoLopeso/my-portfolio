@@ -5,6 +5,7 @@ import BoxContainer from "../components/BoxContainer";
 import BtnNextOrPrevious from '../components/BtnNextOrPrevious';
 import Modal from '../components/Modal';
 import { DataProjectToCard, IDataProject } from '../data';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -19,6 +20,19 @@ const Projects = () => {
     <BoxContainer title="Projetos">
       <Container>
         {DataProjectToCard.map((i, k) => (
+          
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              damping: 9,
+              mass: .4,
+              stiffness: 150,
+              duration: 1,
+              delay: ((k+1)/20)+1
+            }}
+          >
           <CardProject key={k}>
             <ThumbProject 
               onClick={() => openingModal({ title: i.title, img: i.img, desc: i.desc, link: i.link})}
@@ -36,6 +50,7 @@ const Projects = () => {
               </span>
             </BoxInfo>
           </CardProject>
+          </motion.div>
         ))}
 
       </Container>

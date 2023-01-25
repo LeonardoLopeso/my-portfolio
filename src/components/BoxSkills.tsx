@@ -1,39 +1,96 @@
 
 import styled from 'styled-components';
 import { AssetsHardSkills, Skills } from '../data';
+import { motion } from 'framer-motion';
 
 
 const BoxSkills = () => {
   return(
     <SectionInformation>
       <SoftSkill>
-          <div>
+          <motion.div
+            initial={{ y: 30 }}
+            animate={{ y: 0 }}
+            transition={{
+              type: "spring",
+              damping: 9,
+              mass: .4,
+              stiffness: 150,
+              duration: 1,
+            }}
+          >
             <h3>
               <span>Soft Skill</span>
             </h3>
-          </div>
-          <ul>
+          </motion.div>
+          <motion.ul
+            initial={{ x: -30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              damping: 9,
+              mass: .4,
+              stiffness: 150,
+              duration: 1,
+              delay: .2,
+            }}
+          >
             {Skills.map((skl, indx) => (
               <li key={indx}>{skl}</li>
             ))}   
-          </ul>
+          </motion.ul>
       </SoftSkill>
       
       <HardSkill>
-          <div>
+          <motion.div
+            initial={{ y: 30 }}
+            animate={{ y: 0 }}
+            transition={{
+              type: "spring",
+              damping: 9,
+              mass: .4,
+              stiffness: 150,
+              duration: 1,
+            }}
+          >
             <h3>
               <span>Hard Skill</span>
             </h3>
-          </div>
+          </motion.div>
           <CardHardSkill>
             {AssetsHardSkills.map((hskil, idx) => (
               <div key={idx}>
-                <h4>{hskil.area}</h4>
+                <motion.h4
+                  initial={{ x: 30, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    damping: 9,
+                    mass: .4,
+                    stiffness: 150,
+                    duration: 1,
+                    delay: .4
+                  }}
+                >
+                  {hskil.area}
+                </motion.h4>
+
                 <div>{hskil.skill.map((i, k) => (
-                  <div>
+                  <motion.div
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      damping: 6,
+                      mass: .4,
+                      stiffness: 150,
+                      duration: 1,
+                      delay: (k/10)+1
+                    }}
+                  >
                     <span>{i.title}</span>
                     <img src={i.url} alt={i.title} />
-                  </div>
+                  </motion.div>
                 ))}</div>
               </div>
             ))}
