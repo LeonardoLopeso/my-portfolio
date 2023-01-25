@@ -30,7 +30,6 @@ const Projects = () => {
               mass: .4,
               stiffness: 150,
               duration: 1,
-              delay: ((k+1)/20)+1
             }}
           >
           <CardProject key={k}>
