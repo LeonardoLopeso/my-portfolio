@@ -9,7 +9,7 @@ const MainContext = createContext<MainContextData>({} as MainContextData);
 
 const MainProvider = ({ children }: any) => {
 
-  const [isOpenSidebar, setIsOpenSidebar] = useState(true);
+  const [isOpenSidebar, setIsOpenSidebar] = useState(false);
   
   const openAndCloseSidebar = () => {
     setIsOpenSidebar(!isOpenSidebar);

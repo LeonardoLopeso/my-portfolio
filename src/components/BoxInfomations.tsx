@@ -63,6 +63,21 @@ const SectionInformation = styled.div`
   @media (max-width: 760px) {
     padding: 25px 10px;
   }
+  @media (max-width: 500px) {
+    h3 {
+      font-size: 1rem;
+    }
+
+    ul {
+      li {
+        font-size: 1rem;
+      }
+    }
+
+    div {
+      flex-direction: column;
+    }
+  }
 `;
 
 export default BoxInformations;
