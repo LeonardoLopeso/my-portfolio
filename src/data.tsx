@@ -111,7 +111,7 @@ export const ListExperience: Array<IDataWork> = [
     start: "Abril/2021",
     end: "Atual",
     occupation: "Desenvolvedor Web FullStack",
-    description: "Desenvolvo sistemas Web",
+    description: "Desenvolvedor no time de implantação e manutenção de sistemas web's voltados para e-commerce's, ERP's e análise de dados. Sendo um dos responsáveis pela implantação de uma plataforma com modelo de negócio B@B, para distribuidoras de autopeças com banco de dados heterogêneos.",
     evolution: [
       {
         occupation: "Desenvolvedor Junior I",
@@ -130,7 +130,7 @@ export const ListExperience: Array<IDataWork> = [
     start: "Março/2018",
     end: "Novembro/2018",
     occupation: "Desenvolvedor Web FullStack",
-    description: "Desenvolvo sistemas Web",
+    description: "Membro de monitoramento acadêmico; Participação no projeto de extensão E-code (Desenvolvimento de sistemas voltados para necessidades internas da intituição)",
     evolution: [
       {
         occupation: "Desenvolvedor Junior I",
