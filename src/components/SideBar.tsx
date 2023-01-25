@@ -35,7 +35,7 @@ const Sidebar = () => {
             <NavLink to={menu.path} key={key}>
               <li 
                 className={active === key+1 ? "active" : ""}
-                onClick={() => setActive(key+1)}
+                onClick={() => {setActive(key+1); openAndCloseSidebar()}}
               >
                   {menu.title}
               </li>
